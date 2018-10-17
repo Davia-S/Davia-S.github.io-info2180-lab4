@@ -2,6 +2,7 @@ let bound1;
 let allBounds;
 let checkWin = false;
 let outOfBounds = false;
+let finish;
 
 window.onload = home;
 
@@ -12,6 +13,8 @@ function home() {
     for (let i = 0; i < allBounds.length - 1; i++) {
 		allBounds[i].onmouseover = overWalls;
     }
+    finish = document.getElementById("end");
+    finish.onmouseover = Win;
 }
 
 function redWall(){
@@ -28,4 +31,10 @@ function overWalls(){
 			}
 		}
 	}
+}
+
+function Win(){
+    if (!outOfBounds){
+        alert("You win!");
+    }
 }
