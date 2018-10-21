@@ -38,7 +38,8 @@ function overWalls(){
 
 function Win(){
     if (!outOfBounds){
-        alert("You win!");
+        //alert("You win!");
+        document.getElementById("status").innerHTML = "You win!";
     }
 }
 
@@ -48,3 +49,5 @@ function restart(){
             allBounds[i].classList.remove("youlose");  
     }
 }
+
+ 
