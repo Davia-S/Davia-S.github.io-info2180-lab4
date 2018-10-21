@@ -3,6 +3,7 @@ let allBounds;
 let checkWin = false;
 let outOfBounds = false;
 let finish;
+let begin;
 
 window.onload = home;
 
@@ -15,6 +16,8 @@ function home() {
     }
     finish = document.getElementById("end");
     finish.onmouseover = Win;
+    begin = document.getElementById("start");
+    begin.onclick = restart;
 }
 
 function redWall(){
@@ -36,5 +39,12 @@ function overWalls(){
 function Win(){
     if (!outOfBounds){
         alert("You win!");
+    }
+}
+
+function restart(){
+	outOfBounds = false;
+    for (let i = 0; i < allBounds.length; i++) {
+            allBounds[i].classList.remove("youlose");  
     }
 }
