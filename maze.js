@@ -18,7 +18,8 @@ function home() {
     finish.onmouseover = Win;
     begin = document.getElementById("start");
     begin.onclick = restart;
-    maze.onmouseleave = noCheat;
+    mazeBox = document.getElementById("maze");
+    mazeBox.onmouseleave = noCheat;
 }
 
 function redWall(){
