@@ -50,6 +50,7 @@ function restart(){
     for (let i = 0; i < allBounds.length; i++) {
             allBounds[i].classList.remove("youlose");  
     }
+    document.getElementById("status").innerHTML = "Move your mouse over the &quot S &quot to begin.";
 }
 
 function noCheat(){
